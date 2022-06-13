@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+
+      <!--------------------------- META INFORMATION ------------------------------>
+      
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+
+      <!------------------------- LINKING STYLE SHEETS ---------------------------->
+
+      <!-- Dashboard Style Sheet -->
+      <link rel="stylesheet" href="../css/Dashboard.css">
+      <!-- Google Fonts Style Sheet -->
+      <link rel="stylesheet" href="../css/font-roboto.css">
+
+    </head>
+
+    <body>
+        <div class="main-container">
+            <!---------------------- Building Header ----------------------->
+            <header class="header">
+
+                <!-- Header Hamburger Icon -->
+                  <div class="header-hamburger">
+                    <input type="checkbox" id="header-hamburger__checkbox" onchange="openCloseSidebar()">
+                    <label for="header-hamburger__checkbox" class="header-hamburger__label">
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                    </label>   
+                  </div>
+
+                <!-- Header Logo -->
+                <div class="header-logo">
+                    <img src="../assets/images/logo.png" alt="Logo Image" class="header-logo__img">
+                    <noscript><img src="images/multiwebpress.png" alt="Logo Image" class="header-logo__img"></noscript>
+                </div> 
+
+                <!-- Header User Profile & Signout -->
+                <div class="header-user">
+                    <img src="../assets/images/dashboard__user.png" alt="User Image" class="header-user__img">
+                    <a href="#"><h2 class="header-user__name">Munzah Shah</h2></a>
+                    <a href="#"><img src="../assets/images/dashboard__signout.png" alt="Logo Image" class="header-user__signout"></a>
+                </div>
+            </header>
+
+            <!-- Building Middle Section (Main Dashboard) -->
+            <div class="middle-window">
+
+              <!---------------------- Building The Fixed SideBar ---------------------->
+              <div class="sidebar__dashboard">
+                <div class="middle-window__Sidebar">
+                  <aside class="sidebar" id="sidebar">
+                    <ul>
+                      
+                        <!-- Home Link -->
+                        <li class="sidebar-menu__box">
+                            <img src="../assets/images/dashboard__home.png" alt="icon home" class="sidebar-menu__icon">
+                            <a class="sidebar-menu__item" href="#">Home</a>
+                        </li>
+  
+                        <!-- Create User Link -->
+                        <li class="sidebar-menu__box">
+                            <img src="../assets/images/dashboard__add-user.png" alt="icon add user" class="sidebar-menu__icon">
+                            <a class="sidebar-menu__item" href="#">Create User</a>
+                        </li>
+  
+                        <!-- Editor Section Link -->
+                        <li class="sidebar-menu__box">
+                          <img src="../assets/images/dashboard__editor-section.png" alt="icon add user" class="sidebar-menu__icon">
+                          <!-- Editor Section Collapsible Sub Menus -->
+                          <div class="wrap-collabsible">
+                            <input id="collapsible1" class="collapsible toggle" type="checkbox">
+                            <label for="collapsible1" class="lbl-toggle sidebar-menu__item">Editor Section</label>
+                            <div class="collapsible-content">
+                                <div class="content-inner">
+                                  <ol type="1" class="sidebar-submenu">
+                                    <li><a class="sidebar-submenu__subitem" href="#">Admission Form</a></li>
+                                    <li><a class="sidebar-submenu__subitem" href="#">Case History Form</a></li>
+                                    <li><a class="sidebar-submenu__subitem" href="#">Individualized E-Plan</a></li>
+                                    <li><a class="sidebar-submenu__subitem" href="#">Add Teacher</a></li>
+                                    <li><a class="sidebar-submenu__subitem" href="#">Withdraw Student</a></li>
+                                  </ol>
+                                </div>
+                            </div>
+                          </div>  
+                        </li>
+                
+                        <!-- Hearing Impaired Link -->
+                        <li class="sidebar-menu__box">
+                          <img src="../assets/images/dashboard__hearing-impaired.png" alt="icon add user" class="sidebar-menu__icon">
+                          <!-- Hearing Impaired Collapsible Sub Menus -->
+                          <div class="wrap-collabsible">
+                            <input id="collapsible2" class="collapsible toggle" type="checkbox">
+                            <label for="collapsible2" class="lbl-toggle sidebar-menu__item">Hearing Impaired</label>
+                            <div class="collapsible-content">
+                                <div class="content-inner">
+                                  <ol type="1" class="sidebar-submenu">
+                                    <li><a class="sidebar-submenu__subitem" href="#">Speech Case History</a></li>
+                                    <li><a class="sidebar-submenu__subitem" href="#">Audiology Assessment</a></li>
+                                    <li><a class="sidebar-submenu__subitem" href="#">Speech Assessment</a></li>
+                                    <li><a class="sidebar-submenu__subitem" href="#">Performance</a></li>
+                                  </ol>
+                                </div>
+                            </div>
+                          </div>  
+                        </li>
+  
+                        <!-- Visual Impaired Link -->
+                        <li class="sidebar-menu__box">
+                            <img src="../assets/images/icon-visual-impaired.png" alt="icon add user" class="sidebar-menu__icon">
+                            <!-- Visual Impaired Collapsible Sub Menus -->
+                            <div class="wrap-collabsible">
+                              <input id="collapsible3" class="collapsible toggle" type="checkbox">
+                              <label for="collapsible3" class="lbl-toggle sidebar-menu__item">Visual Impaired</label>
+                              <div class="collapsible-content">
+                                  <div class="content-inner">
+                                    <ol type="1" class="sidebar-submenu">
+                                      <li><a class="sidebar-submenu__subitem" href="#">Performance</a></li>
+                                    </ol>
+                                  </div>
+                              </div>
+                            </div>  
+                          </li>
+  
+                        <!-- IDD Link -->
+                        <li class="sidebar-menu__box">
+                            <img src="../assets/images/dashboard__idd.png" alt="icon add user" class="sidebar-menu__icon">
+                            <!-- IDD Collapsible Sub Menus -->
+                            <div class="wrap-collabsible">
+                              <input id="collapsible4" class="collapsible toggle" type="checkbox">
+                              <label for="collapsible4" class="lbl-toggle sidebar-menu__item">IDD</label>
+                              <div class="collapsible-content">
+                                  <div class="content-inner">
+                                    <ol type="1" class="sidebar-submenu">
+                                      <li><a class="sidebar-submenu__subitem" href="#">IQ-Test</a></li>
+                                      <li><a class="sidebar-submenu__subitem" href="#">Psychological Assessment</a></li>
+                                      <li><a class="sidebar-submenu__subitem" href="#">Occupational Therapy</a></li>
+                                      <li><a class="sidebar-submenu__subitem" href="#">Child Sensory Profile</a></li>
+                                      <li><a class="sidebar-submenu__subitem" href="#">Physio Profile</a></li>
+                                      <li><a class="sidebar-submenu__subitem" href="#">Behavioral Profile</a></li>
+                                    </ol>
+                                  </div>
+                              </div>
+                            </div>  
+                          </li>
+  
+                        <!-- Result Section Link -->
+                        <li class="sidebar-menu__box">
+                            <img src="../assets/images/dashboard__result-section.png" alt="icon add user" class="sidebar-menu__icon">
+                            <!-- Result Section Collapsible Sub Menus -->
+                            <div class="wrap-collabsible">
+                              <input id="collapsible5" class="collapsible toggle" type="checkbox">
+                              <label for="collapsible5" class="lbl-toggle sidebar-menu__item">Result Section</label>
+                              <div class="collapsible-content">
+                                  <div class="content-inner">
+                                    <ol type="1" class="sidebar-submenu">
+                                      <li><a class="sidebar-submenu__subitem" href="#">HI-Result Card</a></li>
+                                      <li><a class="sidebar-submenu__subitem" href="#">VI-Result Card</a></li>
+                                      <li><a class="sidebar-submenu__subitem" href="#">IDD-Result Card</a></li>
+                                    </ol>
+                                  </div>
+                              </div>
+                            </div>  
+                          </li>
+  
+                        <!-- School View Link -->
+                        <li class="sidebar-menu__box">
+                            <img src="../assets/images/dashboard__school-view.png" alt="icon add user" class="sidebar-menu__icon">
+                            <!-- School View Collapsible Sub Menus -->
+                            <div class="wrap-collabsible">
+                              <input id="collapsible6" class="collapsible toggle" type="checkbox" data-toggle="collapse" href="collapsible5">
+                              <label for="collapsible6" class="lbl-toggle sidebar-menu__item">School View</label>
+                              <div class="collapsible-content">
+                                  <div class="content-inner">
+                                    <ol type="1" class="sidebar-submenu">
+                                      <li><a class="sidebar-submenu__subitem" href="#">All Users</a></li>
+                                      <li><a class="sidebar-submenu__subitem" href="#">All Teachers</a></li>
+                                      <li><a class="sidebar-submenu__subitem" href="#">All Students</a></li>
+                                      <li><a class="sidebar-submenu__subitem" href="#">All HI-Students</a></li>
+                                      <li><a class="sidebar-submenu__subitem" href="#">All VI-Students</a></li>
+                                      <li><a class="sidebar-submenu__subitem" href="#">All IDD-Students</a></li>
+                                    </ol>
+                                  </div>
+                              </div>
+                            </div>  
+                          </li>
+                        
+                    </ul>
+                </aside>
+                </div> 
+              </div>
+
+              <!---------------------- Building The Center Screen (Dasboard) ---------------------->
+              <div class="middle-window__dashboard">
+                Center Window
+                Why is this not moving??????
+              </div>
+            </div>
+            
+
+            <!---------------------- Building The Footer ---------------------->
+            <footer class="footer">
+                <!-- Footer Text -->
+                <div class="footer-text">
+                    Powered by <a href="https://pluraldynamics.com/" target="_blank">Plural Dynamics</a>
+                </div>
+            </footer>
+
+        </div>    
+
+
+        <!--Linking Scripts-->
+        <script type="text/javascript" src="../js/Dashboard.js"></script>
+    </body>
+    
+</html>
