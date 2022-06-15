@@ -1,0 +1,381 @@
+/* --------- BASIC CSS CLEAR SETTINGS --------- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 300;
+}
+
+/* --------- GENERAL ELEMENTS OF ALL FORMS --------- */
+
+/* Containers */
+.form-section-container {
+    padding: 0 3%;
+    overflow: hidden !important;
+}
+
+/* Form Title */
+.form__title {
+    font-size: 1.4rem;
+    color: #7D1334;
+    text-transform: uppercase;
+    padding: 1.2rem;
+}
+.form__title-input__line {
+    color: #7D1334;
+    width: 27px;
+    outline: none;
+    border: none;
+    font-size: 1.4rem;
+    font-weight: 500;
+    margin-left: -5px;
+    border-bottom: 2px solid #7D1334;
+}
+
+/* Form List Groups and Items */
+.form .form-list {
+    text-decoration: none;
+    list-style: none;
+    padding: 1.2rem;
+}
+.form .form-list__item{
+    margin-bottom: 25px;
+    padding: 0px;
+}
+
+/* Collapsible */
+.collapsible {
+    display: none;
+}
+.wrap-collabsible {
+    margin: 1.2rem 0;
+    width: 85vw;
+}
+
+/* Collapsible Heading */
+.lbl-toggle {
+    font-size: 1.25rem;
+    font-weight: 500;
+    padding: 5px 25px;
+    color: #7D1334;
+    cursor: pointer;
+    border-left: 5px solid #7D1334;
+    background-color: #F1F1F1;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    transition: all 0.25s all;    
+}
+.lbl-toggle::after { content: ' ';
+    border-left: 6px solid transparent;
+    border-right: 6px solid transparent;
+    border-top: 8px solid #7D1334;
+    transition: transform .2s ease-out;
+}
+
+/* Styling When Collapsible Is Clicked */
+.toggle:checked + .lbl-toggle::after {
+    transform: rotate(180deg) translateY(1px);
+    border-top: 8px solid #ffffff;
+}
+.toggle:checked + .lbl-toggle {
+    background-color: #7D1334;
+    color: #ffffff;
+    margin-bottom: 0;
+}
+.toggle:checked ~ .collapsible-content {
+    border: 1px solid #7D1334;
+    animation: form_animate_down 0.25s ease-in-out;
+}
+
+/* Collapsible's Inner Content */
+.collapsible-content {
+    margin-top: 0;
+    padding: 0;
+    max-height: 0px;
+    overflow: hidden;
+    transition: max-height .25s ease-in-out;
+}
+.toggle:checked + .lbl-toggle + .collapsible-content {
+    max-height: fit-content;
+}
+.toggle:checked + .lbl-toggle {
+    border-bottom-right-radius: 0;
+    border-bottom-left-radius: 0;
+}
+.collapsible-content .content-inner {
+    background-color: #fff;
+    padding: .5rem 1rem;
+    margin: 0.5rem 0 0 2.2rem;
+    width: fit-content;
+}
+
+/* Section */
+.inner-section {
+    padding: 15px 10px 20px 0px;
+}
+
+/* Flex Rows for elements */
+.form-element-row {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+/* All Labels */
+.form-label {
+    font-size: 1rem;
+    color: #464646;
+    font-weight: 400;
+}
+
+/* All Text/Numbers/Date Input Boxes */
+.form-input-box,
+.form-input-box-medium-sm,
+.form-input-box-medium-la,
+.form-input-box-long {
+    border: none !important;
+    background-color: #F1F1F1 !important;
+    color: #464646 !important;
+    border-radius: 0 !important;
+    padding: 5px !important;
+}
+.form-input-box:focus,
+.form-input-box-medium-sm:focus,
+.form-input-box-medium-la:focus,
+.form-input-box-long:focus {
+    border-color: rgb(191, 222, 255);
+    box-shadow: 0 0 0 0.2rem rgb(191, 222, 255);
+    outline: none;
+}
+
+/* All Text/Numbers/Date Input Box Medium */
+.form-input-box-medium-sm {
+    width: 18vw !important;
+}
+.form-input-box-medium-la {
+    width: 40vw !important;
+}
+
+/* All Text/Numbers/Date Input Box Long */
+.form-input-box-long {
+    width: 70vw !important;
+    margin-left: 1rem;
+    margin-bottom: 1rem;
+}
+
+/* Text Input Lines Style */
+.form-input-line {
+    border: none !important;
+    border-bottom: 1px solid #000000 !important;
+}
+.form-input-line:focus {
+    outline: none !important;
+}
+
+/* Transparent Input Boxes (for tables ) */
+.form-transparent-input {
+    border: none;
+}
+.form-transparent-input:focus {
+    border: none;
+    outline: none;
+}
+
+/* PlaceHolders Of Text/Numbers/Date Inputs */
+.form-input-box::placeholder {
+    color: #727272;
+    font-weight: 400;
+}
+
+/* Asterik (used for required fields) */
+.form-asterik {
+    color: rgb(220, 8, 8);
+}
+
+/* Checkboxes */
+.form-checkbox-small {
+    width: 14px;
+    height: 14px;
+    margin-right: 8px;
+    vertical-align: middle;
+}
+.form-checkbox-big {
+    width: 20px;
+    height: 20px;
+    margin-right: 15px;
+    vertical-align: middle;
+}
+
+/* Input Columns (Small, Medium, and Large) */
+.col-auto-sm {
+    padding: 5px;
+}
+.col-auto-me {
+    padding: 16px;
+}
+.col-auto-la {
+    padding: 25px;
+}
+
+/* Paragraph Text */
+.para-text {
+    font-size: 0.95rem;
+}
+
+/* Table */
+.table {
+    width: 55vw !important;
+}
+
+/* Table Headings */
+.table-heading {
+    font-weight: 600;
+}
+
+/* Table Data (Each Cell) */
+.table-data {
+    padding: 4px 10px !important;
+}
+.table-data-wide {
+    padding: 4px 20px !important;
+}
+
+/* Textarea (Normal and Small) */
+.textarea-lines,
+.textarea-lines-small {
+    resize: none;
+    border: none;
+    
+    line-height: 3ch;
+    background-image: linear-gradient(transparent, transparent calc(3ch - 1px), #000000 0px);
+    background-size: 100% 3ch;
+}
+.textarea-lines-small {
+    width: 50vw;
+}
+.textarea-lines:focus,
+.textarea-lines-small:focus {
+    outline: none;
+}
+
+/* Section List Styling */
+.sub-section {
+    list-style: none;
+    text-decoration: none;
+}
+
+/* Sub Sections' Collapsible Styling */
+.sub-section .wrap-collabsible {
+    margin: 1.2rem 0;
+    width: 78vw;
+}
+
+/* Sub lists text content */
+.sub-list-text {
+    padding-left: 2rem;
+}
+
+/* Animation used in Form Dropdown */
+
+@keyframes form_animate_down{
+    0%{
+        opacity: 0;
+        transform: translateY(-15px);
+    }
+    100%{
+        opacity: 1;
+        transform: translateY(0px);
+    }
+}
+
+
+
+
+
+
+
+/* --------- SPECIFIC FORM'S SETIINGS --------- */
+
+
+/* -------------------------------------
+--------------- IEP FORM ---------------
+---------------------------------------- */
+
+.form-IEP {
+}
+
+/* Section 4 - Special Instructional Consideration */
+
+/* List Stars */
+.list-star {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+/* Section 5 - Measurable Annual Goals */
+
+/*Table's Cells */
+.sect5__col1 {
+    padding: 15px 0;
+}
+.sect5__col1 input {
+    width: 8rem;
+}
+.sect5__col2 {
+    padding: 15px 10px !important;
+}
+.sect5__col3 {
+    padding: 15px 3.8rem !important;
+}
+.sect5__col4 {
+    padding: 15px 10px !important;
+}
+.sect5__col5 {
+    padding: 15px 10px !important;
+}
+.sect5__col6 {
+    padding: 15px 10px !important;
+}
+
+
+/* -------------------------------------
+--------------- OT FORM ----------------
+---------------------------------------- */
+
+.form-OT .section-2 table tr td input[type="text"] {
+    width: 15rem;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Utility CSS - Make utility classes here then Shift to utility file later*/
+.margin-left-sm {
+    margin-left: 1rem;
+}
+.margin-left-me {
+    margin-left: 15rem;
+}
+.margin-top-sm {
+    margin-top: 1rem;
+}
+.padding-top-small {
+    margin-top: -3rem;
+}
+
+
+
+/* TESTING CODE */

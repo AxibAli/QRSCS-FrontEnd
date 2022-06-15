@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="style.css" media="screen">
+    </head>
+    <body>
+
+        <div class="main-container" id="mc">
+            <header class="header" id="header">This is a demo Header for this page</header>
+            <section class="body">
+                <div class="table-container">
+                    <table id="simple_table">
+                        <tr>
+                            <th>Name</th>
+                            <th>City</th>
+                            <th>University</th>
+                            <th>CGPA</th>
+                        </tr>
+                        <tr>
+                            <td>Student # 1</td>
+                            <td>Mirpur Khas</td>
+                            <td>MUET</td>
+                            <td>2.99</td>
+                        </tr>
+                        <tr>
+                            <td>Student # 2</td>
+                            <td>Hyderabad</td>
+                            <td>SZABIST</td>
+                            <td>3.97</td>
+                        </tr>
+                        <tr>
+                            <td>Student # 3</td>
+                            <td>Karachi</td>
+                            <td>NED</td>
+                            <td>2.58</td>
+                        </tr>
+                        <tr>
+                            <td>Student # 4</td>
+                            <td>Sukkur</td>
+                            <td>IBA</td>
+                            <td>3.99</td>
+                        </tr>
+                        <tr>
+                            <td>Student # 5</td>
+                            <td>Lahore</td>
+                            <td>LUMS</td>
+                            <td>4.00</td>
+                        </tr>
+                        <tr>
+                            <td>Student # 6</td>
+                            <td>Swabi</td>
+                            <td>GIKI</td>
+                            <td>3.55</td>
+                        </tr>
+            
+                    </table>
+                </div>
+                <div class="btn-container">
+                    <button id="download-csv" onclick="htmlToCSV()">Export To CSV</button>
+                    <button id="download-pdf" onclick="htmlToPDF()">Export To PDF</button>
+                    <button id="print-table" onclick="printTable()">Print Table</button>
+                </div>
+
+
+            </section>
+            <footer class="footer" id="footer">This is a demo Footer for this page &copy; Plural Dynamics</footer>
+        </div>
+
+
+
+        <script src="table.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/1.5.3/jspdf.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf-autotable/3.5.6/jspdf.plugin.autotable.min.js"></script>
+    </body>
+</html>
