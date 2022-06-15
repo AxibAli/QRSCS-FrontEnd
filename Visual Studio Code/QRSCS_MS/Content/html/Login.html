@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+    	<!--------------------------- META INFORMATION ------------------------------>
+
+		<title>QRSCS Login</title>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+
+      	<!------------------------- LINKING STYLE SHEETS ---------------------------->
+
+		<!-- Login Main Style Sheet -->
+		<link rel="stylesheet" type="text/css" href="css/login.css">
+		<!-- Utiilities Style Sheet -->
+		<link rel="stylesheet" type="text/css" href="css/util.css">
+		<!-- Google Fonts Style Sheet -->
+		<link rel="stylesheet" href="css/downloaded/fonts/font-roboto.css">
+		<!-- Bootstrap Style Sheet -->
+		<link rel="stylesheet" type="text/css" href="vendor/bootstrap/css/bootstrap.min.css">
+		<!-- Icons Style Sheet -->
+		<link rel="stylesheet" type="text/css" href="fonts/iconic/css/material-design-iconic-font.min.css">
+
+		<!---------------------------- LINKING FAVICON ------------------------------->
+
+		<link rel="icon" type="image/png" href="images/root-images/logo.png"/>
+
+	</head>
+
+	<body>
+
+		<!--Overall Login Screen-->
+		<div class="login-screen">
+			<!--Login Form Container-->
+			<div class="login-form-container">
+				<!--Form Wrapper-->
+				<div class="login-form-wrap">
+
+					<!--Login Form-->
+					<form class="login-form validate-form">
+
+						<!--Form Logo-->
+						<span class="login-form__logo"><img src="images/root-images/logo.png"></span>
+
+						<!--Form Heading-->
+						<span class="login-form__title p-b-34 p-t-27"> Login </span>
+
+						<!--Form Inputs: Username-->
+						<div class="login-form__input-container validate-input" data-validate = "Username Missing">
+							<input class="login-form__input" type="text" name="login-username" placeholder="Username">
+							<span class="login-form__input-focus" data-placeholder="&#xf207;"></span>
+						</div>
+
+						<!--Form Inputs: Password-->
+						<div class="login-form__input-container validate-input" data-validate="Password Missing">
+							<input class="login-form__input" type="password" name="login-password" placeholder="Password">
+							<span class="login-form__input-focus" data-placeholder="&#xf191;"></span>
+						</div>
+
+						<!--Remember Me Checkbox-->
+						<div class="login-form__checkbox-container">
+							<input class="login-form__checkbox-input" id="remember-me-chk" type="checkbox" name="login-remember-me">
+							<label class="login-form__checkbox-label" for="remember-me-chk">Remember me</label>
+							<a class="login-form__forget" href="#">Forgot Password?</a>
+						</div>
+
+						<!--Login Button-->
+						<div class="login-form__btn-container">
+							<a href="../Dashboard/dashboard.html"><button class="login-form__btn">Login</button></a>
+						</div>
+
+					</form>
+				</div>
+			</div>
+		</div>
+	
+		<!---------------------------- LINKING SCRIPTS ------------------------------->
+
+		<script src="js/login.js"></script>
+		<script src="vendor/jquery/jquery-3.2.1.min.js"></script>
+		<script src="vendor/bootstrap/js/bootstrap.min.js"></script>
+
+	</body>
+
+</html>
